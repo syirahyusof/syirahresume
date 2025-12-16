@@ -1,0 +1,99 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>GALLERY | MY RESUME</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<button class="dark-toggle" onclick="toggleDark()">🌙 Dark Mode</button>
+
+<script>
+  function toggleDark(){
+    document.body.classList.toggle("dark");
+  }
+</script>
+
+<script>
+    alert("Welcome to my Gallery page ");
+</script>
+
+ <header class="main-header">
+    <h1>My Gallery</h1>
+    <div id="clock" class="digital-clock"></div>
+</header>
+
+<nav class="navbar">
+    <a href="index.html" class="active">Home</a>
+    <a href="aboutme.html" class="active">About Me</a>
+    <a href="education.html" class="active">Education</a>
+    <a href="experience.html" class="active">Experience</a>
+    <a href="family.html" class="active">Family</a>
+    <a href="gallery.html" class="active">Gallery</a>
+    <a href="music.html" class="active">Music</a>
+</nav>
+
+  </header>
+
+  <div class="container">
+
+    <section class="section">
+      <h2>Beautiful Moments of My Life</h2>
+      <p>
+        This gallery features of the most meaningful moments that represent important memories and milestones in my life. Each photo holds a special story and value to me.
+      </p>
+    </section>
+
+    <section class="section">
+      <div class="card">
+        <div class="gallery" style="grid-template-columns:repeat(3, 1fr);">
+          <img src="gallery1.jpg" alt="Memory 1">
+          <img src="gallery2.jpg" alt="Memory 2">
+          <img src="gallery3.jpg" alt="Memory 3">
+          <img src="gallery4.jpg" alt="Memory 4">
+          <img src="gallery5.jpg" alt="Memory 5">
+          <img src="gallery6.jpg" alt="Memory 6">
+          <img src="gallery7.jpg" alt="Memory 7">
+          <img src="gallery8.jpg" alt="Memory 8">
+          <img src="gallery9.jpg" alt="Memory 9">
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <footer>
+    <p>© 2025 Nur Insyirah. All rights reserved.</p>
+    </footer>
+
+<script>
+    function pad(n) {
+        return n < 10 ? '0' + n : n;
+    }
+
+    function updateClock() {
+        const now = new Date();
+
+        let hours = now.getHours();
+        const minutes = pad(now.getMinutes());
+        const seconds = pad(now.getSeconds());
+        const ampm = hours >= 12 ? "PM" : "AM";
+
+        hours = hours % 12;
+        hours = hours ? hours : 12;
+
+        const timeStr = pad(hours) + ":" + minutes + ":" + seconds + " " + ampm;
+        const dateStr =
+            pad(now.getDate()) + "/" +
+            pad(now.getMonth() + 1) + "/" +
+            now.getFullYear();
+
+        document.getElementById("clock").textContent =
+            timeStr + " | " + dateStr;
+    }
+
+    updateClock();
+    setInterval(updateClock, 1000);
+</script>
+</body>
+</html>

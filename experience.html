@@ -1,0 +1,129 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>EXPERIENCE | MY RESUME</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<button class="dark-toggle" onclick="toggleDark()">🌙 Dark Mode</button>
+
+<script>
+  function toggleDark(){
+    document.body.classList.toggle("dark");
+  }
+</script>
+
+<script>
+    alert("Welcome to my Experience page 🎓");
+</script>
+
+<header class="main-header">
+    <h1>My Experience</h1>
+    <div id="clock" class="digital-clock"></div>
+</header>
+
+<nav class="navbar">
+    <a href="index.html" class="active">Home</a>
+    <a href="aboutme.html" class="active">About Me</a>
+    <a href="education.html" class="active">Education</a>
+    <a href="experience.html" class="active">Experience</a>
+    <a href="family.html" class="active">Family</a>
+    <a href="gallery.html" class="active">Gallery</a>
+    <a href="music.html" class="active">Music</a>
+</nav>
+  </header>
+
+  <div class="container">
+
+    <section class="section">
+      <h2>Internship Experience</h2>
+      <p>
+        Although I do not have formal work experience yet, my internship provided valuable
+        exposure to a professional working environment. It helped me develop practical
+        skills, responsibility, and confidence.
+      </p>
+    </section>
+
+    <section class="section">
+      <div class="card">
+        <h3>Internship Details</h3>
+        <span>My Internship Student</span>
+        <p style="margin-top:10px;">
+          Organization: <strong>ADTEC JTM Pasir Gudang</strong><br>
+          Duration: <strong>27th July – 19th September 2025</strong>
+        </p>
+
+        <ol style="margin-top:15px; padding-left:20px;">
+          <li>Assisted in daily administrative and documentation tasks</li>
+          <li>Learned proper workplace communication and teamwork</li>
+          <li>Handled basic data entry and file management</li>
+          <li>Participated in meetings and office activities</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="card">
+        <h3>Skills Gained During Internship</h3>
+        <ul style="margin-top:15px; padding-left:20px;">
+          <li>Time management</li>
+          <li>Professional communication</li>
+          <li>Team collaboration</li>
+          <li>Basic office and computer skills</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="card">
+        <h3>My Internship Memories</h3>
+        <p style="margin-bottom:15px;">
+          Some memorable moments and experiences during my internship that shaped my
+          learning journey.
+        </p>
+        <div class="gallery">
+          <img src="intern1.jpg" alt="Internship Memory 1">
+          <img src="intern2.jpg" alt="Internship Memory 2">
+          <img src="intern3.jpg" alt="Internship Memory 3">
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <footer>
+    <p>© 2025 Nur Insyirah. All rights reserved.</p>
+  </footer>
+
+<script>
+    function pad(n) {
+        return n < 10 ? '0' + n : n;
+    }
+
+    function updateClock() {
+        const now = new Date();
+
+        let hours = now.getHours();
+        const minutes = pad(now.getMinutes());
+        const seconds = pad(now.getSeconds());
+        const ampm = hours >= 12 ? "PM" : "AM";
+
+        hours = hours % 12;
+        hours = hours ? hours : 12;
+
+        const timeStr = pad(hours) + ":" + minutes + ":" + seconds + " " + ampm;
+        const dateStr =
+            pad(now.getDate()) + "/" +
+            pad(now.getMonth() + 1) + "/" +
+            now.getFullYear();
+
+        document.getElementById("clock").textContent =
+            timeStr + " | " + dateStr;
+    }
+
+    updateClock();
+    setInterval(updateClock, 1000);
+</script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>HOME | MY RESUME</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<button class="dark-toggle" onclick="toggleDark()">🌙 Dark Mode</button>
+
+<script>
+  function toggleDark(){
+    document.body.classList.toggle("dark");
+  }
+</script>
+
+<script>
+    alert("Hello! Welcome to my personal website \u{1F60A}");
+</script>
+
+<header class="main-header">
+    <h1>Welcome to My Personal Website</h1>
+    <div id="clock" class="digital-clock"></div>
+</header>
+
+<nav class="navbar">
+    <a href="index.html" class="active">Home</a>
+    <a href="aboutme.html" class="active">About Me</a>
+    <a href="education.html" class="active">Education</a>
+    <a href="experience.html" class="active">Experience</a>
+    <a href="family.html" class="active">Family</a>
+    <a href="gallery.html" class="active">Gallery</a>
+    <a href="music.html" class="active">Music</a>
+</nav>
+  </header>
+
+  <div class="container">
+
+    <section class="section">
+      <h2>Hello, I'm Nur Insyirah</h2>
+      <p>
+        Welcome to my personal resume website. Feel free to explore each page.</p>
+    </section>
+
+    <section class="section">
+      <div class="card" style="display:flex; align-items:center; gap:30px; flex-wrap:wrap;">
+        <img src="profile.jpg" alt="My Profile Photo" style="width:160px; border-radius:50%;">
+        
+ <div class="profile-text">
+        <p>I am a Diploma in Information Management student at UiTM Johor, Cawangan Kampus Segamat.</p>
+        <p>This website showcases my personal background, education, experience, family and memories in my gallery.</p>
+
+        
+<div class="social-icons">
+  <a href="https://instagram.com/syrvhysff" target="_blank">
+    <img src="ig.jpg" alt="Instagram">
+  </a>
+
+  <a href="https://tiktok.com/syrhfee" target="_blank">
+    <img src="tt.jpg" alt="TikTok">
+  </a>
+</div>    
+</section>
+
+  </div>
+
+  <footer>
+    <p>© 2025 Nur Insyirah. All rights reserved.</p>
+  </footer>
+
+<script>
+    function pad(n) {
+        return n < 10 ? '0' + n : n;
+    }
+
+    function updateClock() {
+        const now = new Date();
+
+        let hours = now.getHours();
+        const minutes = pad(now.getMinutes());
+        const seconds = pad(now.getSeconds());
+        const ampm = hours >= 12 ? "PM" : "AM";
+
+        hours = hours % 12;
+        hours = hours ? hours : 12;
+
+        const timeStr = pad(hours) + ":" + minutes + ":" + seconds + " " + ampm;
+        const dateStr =
+            pad(now.getDate()) + "/" +
+            pad(now.getMonth() + 1) + "/" +
+            now.getFullYear();
+
+        document.getElementById("clock").textContent =
+            timeStr + " | " + dateStr;
+    }
+
+    updateClock();
+    setInterval(updateClock, 1000);
+</script>
+</body>
+</html>

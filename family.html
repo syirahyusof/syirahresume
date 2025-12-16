@@ -1,0 +1,155 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>FAMILY | MY RESUME</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<button class="dark-toggle" onclick="toggleDark()">🌙 Dark Mode</button>
+
+<script>
+  function toggleDark(){
+    document.body.classList.toggle("dark");
+  }
+</script>
+
+<script>
+    alert("Welcome to my Family page ");
+</script>
+
+<header class="main-header">
+    <h1>My Family</h1>
+    <div id="clock" class="digital-clock"></div>
+</header>
+
+<nav class="navbar">
+    <a href="index.html" class="active">Home</a>
+    <a href="aboutme.html" class="active">About Me</a>
+    <a href="education.html" class="active">Education</a>
+    <a href="experience.html" class="active">Experience</a>
+    <a href="family.html" class="active">Family</a>
+    <a href="gallery.html" class="active">Gallery</a>
+    <a href="music.html" class="active">Music</a>
+</nav>
+  </header>
+
+  <div class="container">
+
+    <section class="section">
+      <h2>My Beloved Family</h2>
+      <p>
+        Family is my biggest support system and source of motivation. Each member plays
+        an important role in shaping who I am today. This section shares a glimpse of my
+        beloved family members.
+      </p>
+    </section>
+
+    <section class="section">
+      <div class="card">
+        <h3>My Family Members</h3>
+        <table border="1" cellpadding="10" cellspacing="0" width="100%" style="margin-top:15px; border-collapse:collapse;">
+          <tr>
+            <th>No.</th>
+            <th>Relationship</th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>Father</td>
+            <td>A responsible and hardworking person who always supports the family.</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Mother</td>
+            <td>A loving and caring mother who is the heart of our family.</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Oldest Brother</td>
+            <td>A role model who guides and motivates the younger siblings.</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Older Sister</td>
+            <td>A kind and supportive sister who brings joy to the family.</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>Older Brother</td>
+            <td>A caring brother who always looks after everyone.</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>Me</td>
+            <td>The youngest member who is learning and growing every day.</td>
+          </tr>
+        </table>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="card">
+        <h3>My Family Gallery</h3>
+        <div class="family-gallery" style="margin-top:20px;">
+          <img src="abah.jpg" alt="My Father">
+          <img src="mumsie.jpg" alt="My Mother">
+          <img src="along.jpg" alt="Oldest Brother">
+          <img src="angah.jpg" alt="Older Sister">
+          <img src="udin.jpg" alt="Older Brother">
+          <img src="me.jpg" alt="Me">
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="card">
+        <h3>A Little About Us</h3>
+        <ul style="margin-top:15px; padding-left:20px;">
+          <li><strong>Abah:</strong> The pillar of strength in our family.</li>
+          <li><strong>Emak:</strong> The heart that keeps everyone together.</li>
+          <li><strong>Along:</strong> The leader and protector.</li>
+          <li><strong>Angah:</strong> The cheerful soul of the family.</li>
+          <li><strong>Udin:</strong> The supportive and caring one.</li>
+          <li><strong>Me:</strong> The youngest who brings laughter and dreams.</li>
+        </ul>
+      </div>
+    </section>
+
+  </div>
+
+  <footer>
+    <p>© 2025 Nur Insyirah. All rights reserved.</p>
+  </footer>
+
+<script>
+    function pad(n) {
+        return n < 10 ? '0' + n : n;
+    }
+
+    function updateClock() {
+        const now = new Date();
+
+        let hours = now.getHours();
+        const minutes = pad(now.getMinutes());
+        const seconds = pad(now.getSeconds());
+        const ampm = hours >= 12 ? "PM" : "AM";
+
+        hours = hours % 12;
+        hours = hours ? hours : 12;
+
+        const timeStr = pad(hours) + ":" + minutes + ":" + seconds + " " + ampm;
+        const dateStr =
+            pad(now.getDate()) + "/" +
+            pad(now.getMonth() + 1) + "/" +
+            now.getFullYear();
+
+        document.getElementById("clock").textContent =
+            timeStr + " | " + dateStr;
+    }
+
+    updateClock();
+    setInterval(updateClock, 1000);
+</script>
+</body>
+</html>

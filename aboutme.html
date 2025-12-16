@@ -1,0 +1,161 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>ABOUT ME | MY RESUME</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<button class="dark-toggle" onclick="toggleDark()">🌙 Dark Mode</button>
+
+<script>
+  function toggleDark(){
+    document.body.classList.toggle("dark");
+  }
+</script>
+
+<script>
+    alert("Welcome to my About Me page 💜");
+</script>
+
+  <header class="main-header">
+    <h1>About Me</h1>
+    <div id="clock" class="digital-clock"></div>
+</header>
+
+<nav class="navbar">
+    <a href="index.html" class="active">Home</a>
+    <a href="aboutme.html" class="active">About Me</a>
+    <a href="education.html" class="active">Education</a>
+    <a href="experience.html" class="active">Experience</a>
+    <a href="family.html" class="active">Family</a>
+    <a href="gallery.html" class="active">Gallery</a>
+    <a href="music.html" class="active">Music</a>
+</nav>
+  </header> 
+
+  <div class="container">
+
+    <section class="section">
+      <h2>Who Am I?</h2>
+      <img src="image.jpg" class="profile-img" alt="My Photo">
+
+     
+    <!-- LIST & BULLETS -->
+    <section class="section">
+      <div class="card">
+        <h3>Personal Strengths</h3>
+        <ul style="margin-top:15px; padding-left:20px;">
+          <li>Responsible and disciplined</li>
+          <li>Creative and open-minded</li>
+          <li>Good teamwork and communication skills</li>
+          <li>Willing to learn new things</li>
+        </ul>
+      </div>
+    </section>
+
+<p>
+        Hello! My name is <b>Nur Insyirah Binti Mohd Yusof</b> 💜.
+        I was born at <b>Hospital Sultanah Aminah, Johor Bahru</b>
+        on 21st September 2005 and raised in Pasir Gudang, Johor.
+        I am currently pursuing my <b>Diploma in Information Management</b>
+        at UiTM Cawangan Johor, Kampus Segamat.
+    </p>
+
+    <p>
+        I am someone who loves simplicity, photography 📷 and music 🎵.
+        I enjoy exploring new places and spending my free time relaxing.
+    </p>
+
+    <p>
+        Some TMI about me is that I have three phobias that I am currently
+        trying to overcome which are <i>acrophobia, nyctophobia and katsaridaphobia</i>.
+        I also used to play guitar during my elementary school years, which I learned from my cousin.
+    </p>
+</section>
+
+    <section class="section">
+      <div class="card">
+        <h3>Personal Details</h3>
+        <table border="1" cellpadding="10" cellspacing="0" width="100%" style="margin-top:15px; border-collapse:collapse;">
+          <tr>
+            <th><b>Category</b></th>
+            <th><b>Details</b></th>
+          </tr>
+          <tr>
+            <td><b>Full Name</b></td>
+            <td>Nur Insyirah Binti Mohd Yusof</td>
+          </tr>
+        <tr>
+            <td><b>From</b></td>
+            <td>Pasir Gudang, Johor</td>
+        </tr>
+          <tr>
+            <td><b>Status</b></td>
+            <td>Student</td>
+          </tr>
+      <tr>
+            <td><b>Course</b></td>
+            <td>Diploma in Information Management</td>
+        </tr>
+        <tr>
+            <td><b>Campus</b></td>
+            <td>UiTM Segamat</td>
+        </tr>
+          <tr>
+            <td><b>Nationality</b></td>
+            <td>Malaysian</td>
+          </tr>
+        </table>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="card">
+        <h3>My Short Video</h3>
+<div class="video-box">
+  <video controls>
+    <source src="myvideo.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <p class="video-caption">A short video of me!</p>
+</div>    </section>
+
+  </div>
+
+  <footer>
+    <p>© 2025 Nur Insyirah. All rights reserved.</p>
+  </footer>
+
+ <script>
+    function pad(n) {
+        return n < 10 ? '0' + n : n;
+    }
+
+    function updateClock() {
+        const now = new Date();
+
+        let hours = now.getHours();
+        const minutes = pad(now.getMinutes());
+        const seconds = pad(now.getSeconds());
+        const ampm = hours >= 12 ? "PM" : "AM";
+
+        hours = hours % 12;
+        hours = hours ? hours : 12;
+
+        const timeStr = pad(hours) + ":" + minutes + ":" + seconds + " " + ampm;
+        const dateStr =
+            pad(now.getDate()) + "/" +
+            pad(now.getMonth() + 1) + "/" +
+            now.getFullYear();
+
+        document.getElementById("clock").textContent =
+            timeStr + " | " + dateStr;
+    }
+
+    updateClock();
+    setInterval(updateClock, 1000);
+</script>
+
+</body>
+</html>
